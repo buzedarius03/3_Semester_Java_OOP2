@@ -2,7 +2,6 @@ package at.tugraz.oop2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Collections;
-
 @SpringBootApplication
 public class MapApplication {
     public static void main(String[] args) {
@@ -26,6 +25,8 @@ public class MapApplication {
         var app = new SpringApplication(MapApplication.class);
         app.setDefaultProperties(Collections.singletonMap("server.port", JMAP_MIDDLEWARE_PORT));
         app.run();
+
+
 
 
         //System.out.println(JMAP_MIDDLEWARE_PORT);
