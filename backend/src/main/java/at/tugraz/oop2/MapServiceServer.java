@@ -15,6 +15,10 @@ public class MapServiceServer {
         int JMAP_BACKEND_PORT;
         try {
             JMAP_BACKEND_PORT = Integer.parseInt(JMAP_BACKEND_PORT_String);
+            if(JMAP_BACKEND_PORT < 0 || JMAP_BACKEND_PORT >= 65536)
+            {
+                JMAP_BACKEND_PORT = 8020;
+            }
         }
         catch(NumberFormatException e) {
             JMAP_BACKEND_PORT = 8020;
