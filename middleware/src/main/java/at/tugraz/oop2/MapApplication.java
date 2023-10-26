@@ -22,9 +22,9 @@ public class MapApplication {
             JMAP_MIDDLEWARE_PORT = 8010;
         }
 
-        MapLogger.middlewareStartup(8010, "localhost:8020");
+        MapLogger.middlewareStartup(JMAP_MIDDLEWARE_PORT, JMAP_BACKEND_TARGET_String);
         var app = new SpringApplication(MapApplication.class);
-        app.setDefaultProperties(Collections.singletonMap("server.port", 8010));
+        app.setDefaultProperties(Collections.singletonMap("server.port", JMAP_MIDDLEWARE_PORT));
         app.run();
 
 
