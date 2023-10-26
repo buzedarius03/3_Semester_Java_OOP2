@@ -4,7 +4,7 @@ public class MapApplication {
         String port = "JMAP_MIDDLEWARE_PORT";
         String target = "JMAP_BACKEND_TARGET";
         String JMAP_MIDDLEWARE_PORT_String = System.getenv().getOrDefault(port, "8010");
-        String JMAP_BACKEND_TARGET_String = System.getenv().getOrDefault(target, "localhost: 8020");
+        String JMAP_BACKEND_TARGET_String = System.getenv().getOrDefault(target, "localhost:8020");
 
         int JMAP_MIDDLEWARE_PORT;
         try {
